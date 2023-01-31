@@ -1,0 +1,23 @@
+﻿body {
+    padding-left: 20px;
+    padding-top: 5px;
+    background-color: antiquewhite;
+}
+
+li {
+    color: dimgray;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+}
+
+.myClass {
+    width: 750px;
+}
+
+.myLabel {
+    width: 300px;
+    display: inline-block;
+}
