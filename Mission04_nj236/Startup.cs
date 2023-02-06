@@ -16,14 +16,24 @@ namespace Mission04_nj236
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //This is where I tell my app to use the default files in the wwwroot folder
-            app.UseDefaultFiles();
+            //This is where I tell my app to use the static files and routing
             app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints=>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Blah}/{action=Index}/{id?}"
+                    );
+            });
         }
     }
 }
