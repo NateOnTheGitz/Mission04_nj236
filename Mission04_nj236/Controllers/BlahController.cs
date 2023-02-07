@@ -10,6 +10,7 @@ namespace Mission04_nj236.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
     }

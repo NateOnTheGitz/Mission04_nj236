@@ -22,6 +22,10 @@ namespace Mission04_nj236
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            if (env.IsEnvironment("Development"))
+            {
+                app.UseDeveloperExceptionPage();
+            }
             //This is where I tell my app to use the static files and routing
             app.UseStaticFiles();
 
