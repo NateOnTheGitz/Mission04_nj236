@@ -12,6 +12,11 @@
     <link href="css/default.css" rel="stylesheet" />
 </head>
 <body>
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="GradeCalculator">Grade Calculator</a>
+    </nav>
+
     <div>
         @RenderBody()
     </div>

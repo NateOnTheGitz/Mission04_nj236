@@ -3,3 +3,39 @@
 *@
 @{
 }
+
+@model GradeCalculatorModel;
+
+<!--a grade calculator form-->
+<h3>Grade Calculator</h3>
+<form method="post">
+    <label>Assignments:</label>
+    <input id="assignments" asp-for="Assignments" /><br /> <br />
+    <label>Group Project:</label>
+    <input id="group_project" asp-for="Group" /><br /> <br />
+    <label>Quizzes:</label>
+    <input id="quizzes" asp-for="Quizzes" /><br /> <br />
+    <label>Midterm Exam:</label>
+    <input id="midterm_exam" asp-for="Midterm" /><br /> <br />
+    <label>Final Exam:</label>
+    <input id="final_exam" asp-for="Final" /><br /> <br />
+    <label>INTEX:</label>
+    <input id="intex" asp-for="Intex" /><br /> <br />
+    <label class="myLabel" id="finalGrade">Final Grade: </label> <br /> <br />
+    <!--<textarea rows="4"></textarea> <br /> <br />-->
+    <input id="btnCalculate" type="submit" value="Calculate" />
+    
+    <div asp-validation-summary="All"></div>
+</form>
+<br />
+<!--<p id="finalGrade">Final Grade:</p>-->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--various scripts that facilitate the running of the website-->
+
+<script src="js/GradeCalculator.js"></script>
